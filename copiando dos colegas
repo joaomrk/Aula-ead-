@@ -1,0 +1,62 @@
+export class Conta {
+    private idConta: number
+    private nome: string
+    private senha: string
+    private foto: string
+    private infoAdicional: string
+    private posts: Array<Post>
+    private seguidores: Array<number>
+    private seguindo: Array<number>
+    private mensagensDirect: Array<Array<string | number>>
+ 
+    constructor(id: number, nome: string) {
+        this.id = id;
+        this.nome = nome;
+    }
+ 
+    public getNome(): string {
+        return this.nome;
+    }
+ 
+    public receberMensagem(mensagem: Mensagem): void {
+        this.mensagensRecebidas.push(mensagem);
+    }
+ 
+    public verMensagens(): void {
+        console.log(`Mensagens recebidas por ${this.nome}: `);
+        this.mensagensRecebidas.forEach(mensagem => {
+            console.log(`De: ${mensagem.getRemetente().getNome()}, Conteúdo: ${mensagem.getConteudo()}`);
+        });
+    }
+}export class Conta {
+    private idConta: number
+    private nome: string
+    private senha: string
+    private foto: string
+    private infoAdicional: string
+    private posts: Array<Post>
+    private seguidores: Array<number>
+    private seguindo: Array<number>
+    private mensagensDirect: Array<Array<string | number>>
+ 
+    constructor(id: number, nome: string) {
+        this.id = id;
+        this.nome = nome;
+    }
+ 
+    public getNome(): string {
+        return this.nome;
+    }
+ 
+    public receberMensagem(mensagem: Mensagem): void {
+        this.mensagensRecebidas.push(mensagem);
+    }
+ 
+    public verMensagens(): void {
+        console.log(`Mensagens recebidas por ${this.nome}: `);
+        this.mensagensRecebidas.forEach(mensagem => {
+            console.log(`De: ${mensagem.getRemetente().getNome()}, Conteúdo: ${mensagem.getConteudo()}`);
+        });
+    }
+}
+tem menu de contexto
